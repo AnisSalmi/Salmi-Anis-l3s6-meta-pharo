@@ -1,5 +1,5 @@
 "
-Test class fot the methods of the Counter class
+Test class for the methods of the Counter class
 "
 Class {
 	#name : #CounterTest,
