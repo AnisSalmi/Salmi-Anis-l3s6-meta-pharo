@@ -46,4 +46,6 @@ CounterTest >> testWithValue [
 	| c |
 	c := Counter withValue: 5.
 	self assert: c count equals: 5
+	
+	
 ]
