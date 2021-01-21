@@ -1,0 +1,17 @@
+Étant donné la collection aCol := #(1 2 3 -44 0 5 6 4 5 -3 22 1 2 5)…
+
+   1. Donnez l’expression qui rend la liste des nombres positifs
+
+    aCol select: [ :each | each >= 0 ].
+
+  2. Donnez l’expression qui rend la liste des carrés des nombres
+
+    aCol collect: [ :each | each squared ].
+
+  3. Donnez l’expression qui rend la somme des nombres
+  
+    aCol sum.
+
+  4. Donnez l’expression qui rend le premier nombre négatif
+
+    aCol detect: [ :each | each < 0 ].
