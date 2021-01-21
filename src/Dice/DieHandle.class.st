@@ -33,3 +33,15 @@ DieHandle >> initialize [
 
 	
 ]
+
+{ #category : #'as yet unclassified' }
+DieHandle >> maxValue [ 
+
+	^ (dice collect: [:each | each faces]) sum
+]
+
+{ #category : #playing }
+DieHandle >> roll [ 
+	
+	^ (dice collect: [:each | each roll]) sum
+]
