@@ -7,6 +7,16 @@ Class {
 	#category : #Dice
 }
 
+{ #category : #arithmetic }
+DieHandle >> + aDieHandle [
+
+	| handle |
+	handle := DieHandle new.
+	self dice do: [ :each | handle addDie: each].
+	aDieHandle dice do: [ :each | handle addDie: each].
+	^ handle
+]
+
 { #category : #adding }
 DieHandle >> addDie: aDie [ 
 
@@ -19,7 +29,7 @@ DieHandle >> dice [
 	^ dice
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 DieHandle >> diceNumber [ 
 	
 	^ dice size
@@ -34,7 +44,7 @@ DieHandle >> initialize [
 	
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 DieHandle >> maxValue [ 
 
 	^ (dice collect: [:each | each faces]) sum
