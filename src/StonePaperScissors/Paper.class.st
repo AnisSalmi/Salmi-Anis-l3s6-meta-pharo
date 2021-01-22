@@ -4,25 +4,25 @@ Class {
 	#category : #StonePaperScissors
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #playing }
 Paper >> play: anotherTool [
 	
 	^ anotherTool playAgainstPaper: self. 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #playing }
 Paper >> playAgainstPaper: aPaper [
 	
 	^#draw
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #playing }
 Paper >> playAgainstScissors: aScissors [
 	
 	^ #scissors
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #playing }
 Paper >> playAgainstStone: aStone [
 	
 	^#paper
