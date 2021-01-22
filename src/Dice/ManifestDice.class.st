@@ -11,3 +11,8 @@ Class {
 ManifestDice class >> ruleRBRefersToClassRuleV1FalsePositive [
 	^ #(#(#(#RGMethodDefinition #(#DieHandle #+ #false)) #'2021-01-21T21:18:19.751748+01:00') )
 ]
+
+{ #category : #'code-critics' }
+ManifestDice class >> ruleRBUncommonMessageSendRuleV1FalsePositive [
+	^ #(#(#(#RGMethodDefinition #(#Integer #D20 #false)) #'2021-01-22T15:04:47.606843+01:00') )
+]
