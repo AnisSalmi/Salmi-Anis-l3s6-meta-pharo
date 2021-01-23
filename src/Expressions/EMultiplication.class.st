@@ -37,6 +37,16 @@ EMultiplication >> left: anExpression [
 	left := anExpression 
 ]
 
+{ #category : #printing }
+EMultiplication >> printOn: aStream [
+
+	aStream nextPutAll: '( '.
+	left printOn: aStream. 
+	aStream nextPutAll: ' * '.
+	right printOn: aStream. 
+	aStream nextPutAll: ' )'
+]
+
 { #category : #accessing }
 EMultiplication >> right: anExpression [ 
 

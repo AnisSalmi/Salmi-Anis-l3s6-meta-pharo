@@ -38,12 +38,11 @@ EAddition >> left: anExpression [
 { #category : #printing }
 EAddition >> printOn: aStream [
 
-	super printOn: aStream.
-	aStream nextPutAll: ' ('.
-	aStream print: left.
-	aStream nextPutAll: '+'.
-	aStream print: right.
-	aStream nextPutAll: ')'
+	aStream nextPutAll: '( '.
+	left printOn: aStream. 
+	aStream nextPutAll: ' + '.
+	right printOn: aStream. 
+	aStream nextPutAll: ' )'
 ]
 
 { #category : #accessing }
