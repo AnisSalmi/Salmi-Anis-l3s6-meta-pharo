@@ -7,6 +7,12 @@ Class {
 	#category : #Expressions
 }
 
+{ #category : #accessing }
+ENegation class >> expression: anExpression [
+	
+	^self new expression: anExpression
+]
+
 { #category : #'public access' }
 ENegation >> evaluate [ 
 	
