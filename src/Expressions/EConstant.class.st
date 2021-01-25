@@ -7,14 +7,14 @@ Class {
 	#category : #Expressions
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #'instance creation' }
 EConstant class >> constant3 [
 	<sampleInstance>
 	^ self value: 3
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'instance creation' }
 EConstant class >> constant5 [
 	<sampleInstance>
 	^ self value: 5
