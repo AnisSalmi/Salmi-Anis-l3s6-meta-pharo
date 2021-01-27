@@ -26,6 +26,12 @@ ENegation >> expression: anExpression [
 	expression := anExpression 
 ]
 
+{ #category : #'as yet unclassified' }
+ENegation >> negated [ 
+	
+	^ expression
+]
+
 { #category : #printing }
 ENegation >> printOn: aStream [ 
 	
