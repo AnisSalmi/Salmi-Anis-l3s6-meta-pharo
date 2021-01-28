@@ -4,6 +4,12 @@ Class {
 	#category : #Expressions
 }
 
+{ #category : #'public access' }
+EExpression >> evaluateWith: anObject [ 
+	
+	^ self subclassResponsibility
+]
+
 { #category : #'as yet unclassified' }
 EExpression >> negated [ 
 

@@ -22,9 +22,9 @@ EMultiplication class >> left: anExpression right: anExpression2 [
 ]
 
 { #category : #accessing }
-EMultiplication >> evaluate [ 
-	
-	^ left evaluate * right evaluate
+EMultiplication >> evaluateWith: anObject [
+	^ (left evaluateWith: anObject)
+		* (right evaluateWith: anObject)
 ]
 
 { #category : #'as yet unclassified' }

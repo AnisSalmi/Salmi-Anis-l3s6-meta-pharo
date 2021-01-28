@@ -9,7 +9,7 @@ Class {
 }
 
 { #category : #'public access' }
-EBinaryExpression >> evaluate [ 
+EBinaryExpression >> evaluateWith: anObject [ 
 	
 	^ self subclassResponsibility
 ]

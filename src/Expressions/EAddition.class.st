@@ -20,9 +20,9 @@ EAddition class >> left: anExpression right: anExpression2 [
 ]
 
 { #category : #accessing }
-EAddition >> evaluate [ 
-	
-	^ left evaluate + right evaluate
+EAddition >> evaluateWith: anObject [
+	^ (left evaluateWith: anObject)
+		+ (right evaluateWith: anObject)
 ]
 
 { #category : #'as yet unclassified' }
