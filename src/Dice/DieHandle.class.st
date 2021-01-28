@@ -8,13 +8,9 @@ Class {
 }
 
 { #category : #arithmetic }
-DieHandle >> + aDieHandle [
+DieHandle >> + aDicable [
 
-	| handle |
-	handle := DieHandle new.
-	self dice do: [ :each | handle addDie: each].
-	aDieHandle dice do: [ :each | handle addDie: each].
-	^ handle
+	^ aDicable sumWithHandle: self.
 ]
 
 { #category : #adding }
@@ -54,4 +50,24 @@ DieHandle >> maxValue [
 DieHandle >> roll [ 
 	
 	^ (dice collect: [:each | each roll]) sum
+]
+
+{ #category : #'as yet unclassified' }
+DieHandle >> sumWithDie: aDie [
+	
+	| handle |
+	handle := self class new.
+	self dice do: [ :each | handle addDie: each].
+	handle addDie: aDie.
+	^ handle 
+]
+
+{ #category : #'as yet unclassified' }
+DieHandle >> sumWithHandle: aDieHandle [
+
+	| handle |
+	handle := self class new.
+	self dice do: [ :each | handle addDie: each].
+	aDieHandle dice do: [ :each | handle addDie: each].
+	^ handle
 ]
