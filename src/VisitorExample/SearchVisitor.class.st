@@ -37,5 +37,7 @@ SearchVisitor >> visitNode: aNode [
 { #category : #accessing }
 SearchVisitor >> visitVariableNode: aNode [ 
 
-	^ (aNode name beginsWith: token)ifTrue: [ { aNode } ]ifFalse: [ #() ]
+	^ (aNode name beginsWith: token)
+			ifTrue: [ { aNode } ]
+			ifFalse: [ #() ]
 ]
