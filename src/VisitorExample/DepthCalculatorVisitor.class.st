@@ -1,29 +1,35 @@
 Class {
 	#name : #DepthCalculatorVisitor,
-	#superclass : #BaseASTVisitor,
+	#superclass : #Object,
 	#category : #VisitorExample
 }
 
 { #category : #visiting }
+DepthCalculatorVisitor >> visitLeafNode: aSelfNode [ [ 
+	^ 1
+	]
+]
+
+{ #category : #visiting }
 DepthCalculatorVisitor >> visitLiteralValueNode: aRBLiteralValueNode [
 
-	^ self visitNode: aRBLiteralValueNode
+	^ self visitLeafNode: aRBLiteralValueNode
 ]
 
 { #category : #visiting }
 DepthCalculatorVisitor >> visitMessageNode: aRBMessageNode [
 	
-	^ self visitNode: aRBMessageNode  
+	^ self visitNodeWithChildren: aRBMessageNode  
 ]
 
 { #category : #visiting }
 DepthCalculatorVisitor >> visitMethodNode: aRBMethodNode [
 
-	^ self visitNode: aRBMethodNode 
+	^ self visitNodeWithChildren: aRBMethodNode 
 ]
 
 { #category : #visiting }
-DepthCalculatorVisitor >> visitNode: aNode [ [ 
+DepthCalculatorVisitor >> visitNodeWithChildren: aNode [ [ 
 	
 	^ 1 + (aNode children
 		 inject: 0
@@ -35,11 +41,11 @@ DepthCalculatorVisitor >> visitNode: aNode [ [
 { #category : #visiting }
 DepthCalculatorVisitor >> visitSelfNode: aSelfNode [
 
-	^ self visitNode: aSelfNode 
+	^ self visitLeafNode: aSelfNode 
 ]
 
 { #category : #visiting }
 DepthCalculatorVisitor >> visitSequenceNode: aRBSequenceNode [
 
-	^ self visitNode: aRBSequenceNode
+	^ self visitNodeWithChildren: aRBSequenceNode
 ]
